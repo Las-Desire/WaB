@@ -4,10 +4,11 @@ var express = require('express');
 var app = express();
 var print = console.log;
 
+
 var server = app.listen(3000, function(){
     Server_Start_Message.forEach(x=>console.log(x));
 })
 
-app.get('/', function(req, res){
-    res.send("<h1>FUCK</h1>>");
+app.get('/', (req, res)=>{
+    res.send("<h1>FUCK</h1>");
 });
