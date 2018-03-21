@@ -8,17 +8,28 @@ router.get('/', (req, res) => {
     res.send('LAS');
 });
 
-var send = (res, path)=>{
+var send_jpg = (res, path)=>{
     
     fs.readFile(path,  function(err, data) {
         res.writeHead(200, {'Content-Type': 'image/jpeg'});
         res.end(data);
-    });};
+    });
+};
+
+var send_html = (res, path)=>{
+    
+    fs.readFile(path,  function(err, data) {
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.end(data);
+    });
+};
 
 router.get('/6644', (req, res) => {
     //res.send('<h1>LAS</h1>');
-    send(res,"6.jpg");
+    //server.js path
+    send_html(res,"./HTML/Main.html");
 });
+
 router.post('/message', function (req, res) {
 
     var message = {
