@@ -9,6 +9,5 @@ var server = app.listen(3000, function(){
 })
 
 app.get('/', function(req, res){
-    print(res.type);
-    res.send("FUCK",);
+    res.send("<h1>FUCK</h1>>");
 });
