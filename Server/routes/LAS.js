@@ -25,20 +25,11 @@ var send_html = (res, path)=>{
 };
 
 router.get('/6644', (req, res) => {
-    //res.send('<h1>LAS</h1>');
-    //server.js path
     send_html(res,"./HTML/Main.html");
 });
 
 router.post('/message', function (req, res) {
 
-    var message = {
-        type: 'text',
-        text: "LAS 01"
-    };
-    res.set({
-        'content-type': 'application/json'
-    }).send(JSON.stringify(message));
 });
 
 
