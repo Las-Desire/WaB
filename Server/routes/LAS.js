@@ -30,8 +30,8 @@ router.get('/6644', (req, res) => {
 });
 
 router.post('/6644', (req, res) => {
-    
-    console.log(520);
+    send_html(res,"./HTML/Main.html");
+    console.log(req);
 });
     
 router.post('/message', function (req, res) {
