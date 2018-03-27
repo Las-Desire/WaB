@@ -5,7 +5,7 @@ var fs = require("fs");
 
 /* GET users listing. */
 router.get('/', (req, res) => {
-    res.send('LAS');
+    send_jpg(res,"./routes/6.jpg");
 });
 
 var send_jpg = (res, path)=>{
@@ -26,10 +26,15 @@ var send_html = (res, path)=>{
 
 router.get('/6644', (req, res) => {
     send_html(res,"./HTML/Main.html");
+    console.log(req);
 });
 
+router.post('/6644', (req, res) => {
+    
+    console.log(520);
+});
+    
 router.post('/message', function (req, res) {
-
 });
 
 
