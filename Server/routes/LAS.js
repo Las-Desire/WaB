@@ -5,7 +5,7 @@ var fs = require("fs");
 
 /* GET users listing. */
 router.get('/', (req, res) => {
-    send_jpg(res,"./routes/6.jpg");
+    send_jpg(res,"./routers/6.jpg");
 });
 
 var send_jpg = (res, path)=>{
@@ -26,18 +26,31 @@ var send_html = (res, path)=>{
 
 router.get('/6644', (req, res) => {
     send_html(res,"./HTML/Main.html");
-    console.log(req);
+    console.log(req.body);
 });
 
 router.post('/6644', (req, res) => {
-    send_html(res,"./HTML/Main.html");
-    console.log(req);
+    //send_html(res,"./HTML/Main.html");
+    console.log(req.body);
 });
-    
+
+
+router.get('/myaction', (req, res) => {
+    //send_html(res,"./HTML/Main.html");
+    console.log(req.body);
+    console.log(775);
+});
+router.post('/myaction', (req, res) => {
+    //send_html(res,"./HTML/Main.html");
+    console.log(req.body);
+    console.log(777);
+});
+
 router.post('/message', function (req, res) {
+
 });
 
 
 
 
-module.exports = router;
+module.exports = router;   
