@@ -4,8 +4,8 @@ var router = express.Router();
 var fs = require("fs");
 
 /* GET users listing. */
-router.get('/', (req, res) => {
-    send_jpg(res,"./routers/6.jpg");
+router.get('/image', (req, res) => {
+    send_jpg(res,"./test.jpg");
 });
 
 var send_jpg = (res, path)=>{
@@ -27,30 +27,20 @@ var send_html = (res, path)=>{
 router.get('/6644', (req, res) => {
     send_html(res,"./HTML/Main.html");
     console.log(req.body);
+    console.log('set 6644');
 });
 
 router.post('/6644', (req, res) => {
-    //send_html(res,"./HTML/Main.html");
+    console.log(req);
+    console.log('post 6644');
+});
+
+router.get('/myaction',(req,res)=>{
+    console.log('get action');
+});
+router.post('/myaction',(req,res)=>{
     console.log(req.body);
+    console.log('post action');
 });
-
-
-router.get('/myaction', (req, res) => {
-    //send_html(res,"./HTML/Main.html");
-    console.log(req.body);
-    console.log(775);
-});
-router.post('/myaction', (req, res) => {
-    //send_html(res,"./HTML/Main.html");
-    console.log(req.body);
-    console.log(777);
-});
-
-router.post('/message', function (req, res) {
-
-});
-
-
-
 
 module.exports = router;   
