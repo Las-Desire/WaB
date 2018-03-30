@@ -169,7 +169,7 @@
         left: calc( 50%  );
         top: calc( 50% - 300px );
     }
-    110%{
+    100%{
         left: calc( 50% - 300px );
         top: calc( 50% );
     }
@@ -237,13 +237,94 @@
     }
 }
 
+.first_circle4{
+    animation: square4 5s ease 0s infinite;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(240, 90, 90); 
+  position: absolute;
+    left: 50%;
+    top: 50%;
+}
+@keyframes square4{
+    0%{
+        left: calc( 50%  );
+        top: calc( 50% + 300px );
+    }
+    25%{
+        left: calc( 50% + 300px );
+        top: calc( 50% );
+    }
+    50%{
+        left: calc( 50%  );
+        top: calc( 50% - 300px );    
+    }
+    75%{    
+        left: calc( 50% - 300px );
+        top: calc( 50% );
+    }
+    100%{
+        left: calc( 50%  );
+        top: calc( 50% + 300px );
+    }
+}
+
+.first_Box{
+    animation: route 2.5s ease 0s infinite;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(90, 167, 240, 0.815); 
+  position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}
+@keyframes route{
+    0%{
+        transform:rotate();
+        animation-delay: 2s
+    }
+    25%{
+        transform:rotate(90deg);
+    }
+    50%{
+        transform:rotate(180deg);
+    }
+    75%{    
+        transform:rotate(90deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+
+.main_frame{
+
+}
 </style>
 <div>
-    <div class="first_circle1"></div>
+    <div class="first_circle1">
+        <div class="first_circle2" style="
+        animation-delay: .2s;
+        "></div>
+    </div>
     
-    <div class="first_circle2"></div>
+    <div class="first_circle2">
+        <div class="first_circle3" style="
+        animation-delay: .2s;
+        "></div>
+    </div>
+    <div class="first_circle3">
+        <div class="first_circle4" style="
+        animation-delay: .2s;
+        "></div>
+    </div>
+    <div class="first_circle4">
+        <div class="first_circle1" style="
+        animation-delay: .2s;
+        "></div>
+    </div>
 
-    <div class="first_circle3"></div>
+    <div class="first_Box"></div>
 </div>
 
 <!--
