@@ -4,6 +4,8 @@
   height: 200px;
   background-color: coral; 
   animation: square-to-circle 2s 1s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+  position: relative;
+  overflow: hidden;
 }
 
 @keyframes square-to-circle {
@@ -58,6 +60,7 @@
   margin-left: 10%;
   background-color: rgb(117, 116, 116); 
   float:left;
+  position: absolute;
 }
 
 .wave30{
@@ -139,8 +142,111 @@
    }
 }
 
+
+.first_circle1{
+    animation: square1 5s ease 0s infinite;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(240, 90, 90); 
+  position: absolute;
+    left: 50%;
+    top: 50%;
+}
+@keyframes square1{
+    0%{
+        left: calc( 50% - 300px );
+        top: calc( 50% );
+    }
+    25%{    
+        left: calc( 50%  );
+        top: calc( 50% + 300px );
+    }
+    50%{
+        left: calc( 50% + 300px );
+        top: calc( 50% );
+    }
+    75%{    
+        left: calc( 50%  );
+        top: calc( 50% - 300px );
+    }
+    110%{
+        left: calc( 50% - 300px );
+        top: calc( 50% );
+    }
+}
+.first_circle2{
+    animation: square2 5s ease 0s infinite;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(240, 90, 90); 
+  position: absolute;
+    left: 50%;
+    top: 50%;
+}
+@keyframes square2{
+    0%{
+        left: calc( 50%  );
+        top: calc( 50% - 300px );
+    }
+    25%{    
+        left: calc( 50% - 300px );
+        top: calc( 50% );
+    }
+    50%{
+        left: calc( 50%  );
+        top: calc( 50% + 300px );
+    }
+    75%{    
+        left: calc( 50% + 300px );
+        top: calc( 50% );
+    }
+    100%{
+        left: calc( 50%  );
+        top: calc( 50% - 300px );
+    }
+}
+.first_circle3{
+    animation: square3 5s ease 0s infinite;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(240, 90, 90); 
+  position: absolute;
+    left: 50%;
+    top: 50%;
+}
+@keyframes square3{
+    0%{
+        left: calc( 50% + 300px );
+        top: calc( 50% );
+    }
+    25%{
+        left: calc( 50%  );
+        top: calc( 50% - 300px );    
+    }
+    50%{
+        left: calc( 50% - 300px );
+        top: calc( 50% );
+    }
+    75%{    
+        left: calc( 50%  );
+        top: calc( 50% + 300px );
+    }
+    100%{
+        left: calc( 50% + 300px );
+        top: calc( 50% );
+    }
+}
+
 </style>
-<h1>Main Las a.k.a Wonho</h1>
+<div>
+    <div class="first_circle1"></div>
+    
+    <div class="first_circle2"></div>
+
+    <div class="first_circle3"></div>
+</div>
+
+<!--
 <div class="move">
     <div class="wave70"></div>
     <div class="wave40"></div>
@@ -151,3 +257,4 @@
     <div class="wave30"></div>    
     <div class="wave40"></div>    
 </div>
+-->
