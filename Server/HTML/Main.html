@@ -270,7 +270,7 @@
 }
 
 .first_Box{
-    animation: route 2.5s ease 0s infinite;
+    animation: route 5s ease 0s infinite;
   width: 100px;
   height: 100px;
   background-color: rgba(90, 167, 240, 0.815); 
@@ -280,19 +280,23 @@
 }
 @keyframes route{
     0%{
+    border-radius:0 0 0 0;
         transform:rotate();
-        animation-delay: 2s
     }
     25%{
+    border-radius:0 0 50% 0;
         transform:rotate(90deg);
     }
     50%{
+    border-radius:0 0 0 50%;
         transform:rotate(180deg);
     }
     75%{    
+    border-radius:50% 0 0 0;
         transform:rotate(90deg);
     }
     100%{
+    border-radius:0 0 0 0;
         transform:rotate(0deg);
     }
 }
