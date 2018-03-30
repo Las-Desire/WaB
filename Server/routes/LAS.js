@@ -26,21 +26,6 @@ var send_html = (res, path)=>{
 
 router.get('/6644', (req, res) => {
     send_html(res,"./HTML/Main.html");
-    console.log(req.body);
-    console.log('set 6644');
-});
-
-router.post('/6644', (req, res) => {
-    console.log(req);
-    console.log('post 6644');
-});
-
-router.get('/myaction',(req,res)=>{
-    console.log('get action');
-});
-router.post('/myaction',(req,res)=>{
-    console.log(req.body);
-    console.log('post action');
 });
 
 module.exports = router;   

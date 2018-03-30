@@ -1,33 +1,156 @@
-<h1>Main Las a.k.a Wonho</h1>
-<script>
-    var functor = ()=>{
-        console.log(5);
-        var input = document.getElementById('Input').value;
-        console.log(input);  
-    };
-</script>
-<form method="POST" >
-    <input type="text" id="Input" name="text" value=""></input>
-    <input type="submit">
-        <button onclick="functor();">qwe</button>
-    </input>
+
+<link rel="stylesheet" href="./HTML/scss/modules/pc/eriri-animation.scss" />
+<link rel="stylesheet" href="./HTML/scss/style.scss" />
+<style>
+.move {
+  width: 200px;
+  height: 200px;
+  background-color: coral; 
+  animation: square-to-circle 2s 1s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+}
+
+@keyframes square-to-circle {
+  0%{}
+  25%{}
+  50%{}
+  75%{}
+  100%{}
+}
+@keyframes square-to-circle {
+  0%  {
+    border-radius:0 0 0 0;
+    background:coral;
+    transform:rotate(0deg);
+    margin-left: 0%;
     
-</form>
-<div id="contact">
-    <h1>Send an email</h1>
-    <form action="/myaction" method="post">
-        <fieldset>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" />
+  }
+  25%  {
+    border-radius:50% 0 0 0;
+    background:darksalmon;
+    transform:rotate(45deg);
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  50%  {
+    border-radius:50% 50% 0 0;
+    background:indianred;
+    transform:rotate(90deg);
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+  75%  { 
+    border-radius:50% 50% 50% 0;
+    background:lightcoral;
+    transform:rotate(135deg);
+    margin-left: 30%;
+    margin-top: 30%;
+  }
+  100% {  
+    border-radius:50%;
+    background:darksalmon;
+    transform:rotate(180deg);
+    margin-left: 40%;
+    margin-top: 30%;
+  }
+}
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter your email address" />
+.wave70{
+    animation: wave70 0.8s ease 0s infinite;
+  width: 2px;
+  height: 200px;
+  margin-left: 10%;
+  background-color: rgb(117, 116, 116); 
+  float:left;
+}
 
-            <label for="message">Message:</label>
-            <textarea id="message" placeholder="What's on your mind?"></textarea>
+.wave30{
+    animation: wave30 0.5s ease 0s infinite;
+  width: 2px;
+  height: 200px;
+  margin-left: 10%;
+  background-color: rgb(117, 116, 116); 
+  float:left;
+}
 
-            <input type="submit" value="Send message" />
+.wave40{
+    animation: wave40 0.6s ease 0s infinite;
+  width: 2px;
+  height: 200px;
+  margin-left: 10%;
+  background-color: rgb(117, 116, 116); 
+  float:left;
+}
 
-        </fieldset>
-    </form>
+.wave50{
+    animation: wave50 0.9s ease 0s infinite;
+  width: 2px;
+  height: 200px;
+  margin-left: 10%;
+  background-color: rgb(117, 116, 116); 
+  float:left;
+}
+
+.wave60{
+    animation: wave60 0.4s ease 0s infinite;
+  width: 2px;
+  height: 200px;
+  margin-left: 10%;
+  background-color: rgb(117, 116, 116); 
+  float:left;
+}
+@keyframes wave30 {
+  0%    { transform: translateY(0%); }
+  50%   { transform: translateY(30%); }
+  100%  { transform: translateY(0%); }
+}
+@keyframes wave40 {
+  0%    { transform: translateY(0%); }
+  50%   { transform: translateY(40%); }
+  100%  { transform: translateY(0%); }
+}
+@keyframes wave50 {
+  0%    { transform: translateY(0%); }
+  50%   { transform: translateY(50%); }
+  100%  { transform: translateY(0%); }
+}
+@keyframes wave60 {
+  0%    { transform: translateY(0%); }
+  50%   { transform: translateY(60%); }
+  100%  { transform: translateY(0%); }
+}
+@keyframes wave70 {
+  0%    { transform: translateY(0%); }
+  50%   { transform: translateY(70%); }
+  100%  { transform: translateY(0%); }
+}
+.sweap {
+  width: 200px;
+  height: 10px;
+  background-color: rgb(60, 148, 219); 
+  animation: movement 2s 1s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+}
+@keyframes movement {
+  0%{}
+  100%{}
+}
+@keyframes movement {
+  0%  {
+    margin-left: 0%;
+  }
+  100% {  
+    margin-left: 50%;
+   }
+}
+
+</style>
+<h1>Main Las a.k.a Wonho</h1>
+<div class="move">
+    <div class="wave70"></div>
+    <div class="wave40"></div>
+    <div class="wave50"></div>    
+    <div class="wave30"></div>
+    <div class="wave70"></div>
+    <div class="wave60"></div>
+    <div class="wave30"></div>    
+    <div class="wave40"></div>    
 </div>
