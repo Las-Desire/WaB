@@ -270,7 +270,7 @@
 }
 
 .first_Box{
-    animation: route 5s ease 0s infinite;
+  animation: route 5s 0s infinite cubic-bezier(1,.015,.295,1.225);
   width: 100px;
   height: 100px;
   background-color: rgba(90, 167, 240, 0.815); 
@@ -280,66 +280,187 @@
 }
 @keyframes route{
     0%{
-    border-radius:0 0 0 0;
-        transform:rotate();
+    border-radius: 50% 50% 50% 0;
+        transform:rotate(360deg);
     }
     25%{
-    border-radius:0 0 50% 0;
-        transform:rotate(90deg);
+    border: radius 50% 0 50% 50%;
+        transform:rotate(270deg);
     }
     50%{
-    border-radius:0 0 0 50%;
+    border-radius:50% 50% 50% 0;
         transform:rotate(180deg);
     }
     75%{    
-    border-radius:50% 0 0 0;
+    border-radius:50% 50% 50% 0%;
         transform:rotate(90deg);
     }
     100%{
-    border-radius:0 0 0 0;
-        transform:rotate(0deg);
+    border-radius:50% 50% 50% 0;
+        transform:rotate();
     }
 }
 
-.main_frame{
-
+.secend_box1{
+    animation: secend_box1 5s ease 0s infinite;
+    width: 20px;
+  height: 20px;
+  background-color: rgb(125, 240, 90); 
+  position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+@keyframes secend_box1 {
+    0%{
+        left: calc( 50% - 100px);
+        top: calc( 50% - 100px);
+    }
+    25%{
+        left: calc( 50% + 100px );
+        top: calc( 50% - 100px);
+    }
+    50%{
+        left: calc( 50% + 100px);
+        top: calc( 50% + 100px );    
+    }
+    75%{    
+        left: calc( 50% - 100px );
+        top: calc( 50% + 100px);
+    }
+    100%{
+        left: calc( 50% - 100px);
+        top: calc( 50% - 100px);
+    }
+}
+.secend_box2{
+    animation: secend_box2 5s ease 0s infinite;
+    width: 20px;
+  height: 20px;
+  background-color: rgb(125, 240, 90); 
+  position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+@keyframes secend_box2 {
+    0%{
+        left: calc( 50% - 100px );
+        top: calc( 50% + 100px);
+    }
+    25%{
+        left: calc( 50% - 100px);
+        top: calc( 50% - 100px);
+    }
+    50%{
+        left: calc( 50% + 100px );
+        top: calc( 50% - 100px);    
+    }
+    75%{    
+        left: calc( 50% + 100px);
+        top: calc( 50% + 100px );
+    }
+    100%{
+        left: calc( 50% - 100px );
+        top: calc( 50% + 100px);
+    }
+}
+.secend_box3{
+    animation: secend_box3 5s ease 0s infinite;
+    width: 20px;
+  height: 20px;
+  background-color: rgb(125, 240, 90); 
+  position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+@keyframes secend_box3 {
+    0%{
+        left: calc( 50% + 100px);
+        top: calc( 50% + 100px );
+    }
+    25%{
+        left: calc( 50% - 100px );
+        top: calc( 50% + 100px);
+    }
+    50%{
+        left: calc( 50% - 100px);
+        top: calc( 50% - 100px);    
+    }
+    75%{    
+        left: calc( 50% + 100px );
+        top: calc( 50% - 100px);
+    }
+    100%{
+        left: calc( 50% + 100px);
+        top: calc( 50% + 100px );
+    }
+}
+.secend_box4{
+    animation: secend_box4 5s ease 0s infinite;
+    width: 20px;
+  height: 20px;
+  background-color: rgb(125, 240, 90); 
+  position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+@keyframes secend_box4 {
+    0%{
+        left: calc( 50% + 100px );
+        top: calc( 50% - 100px);
+    }
+    25%{
+        left: calc( 50% + 100px);
+        top: calc( 50% + 100px );
+    }
+    50%{
+        left: calc( 50% - 100px );
+        top: calc( 50% + 100px);    
+    }
+    75%{    
+        left: calc( 50% - 100px);
+        top: calc( 50% - 100px);
+    }
+    100%{
+        left: calc( 50% + 100px );
+        top: calc( 50% - 100px);
+    }
 }
 </style>
 <div>
     <div class="first_circle1">
-        <div class="first_circle2" style="
-        animation-delay: .2s;
-        "></div>
     </div>
-    
     <div class="first_circle2">
-        <div class="first_circle3" style="
-        animation-delay: .2s;
-        "></div>
     </div>
     <div class="first_circle3">
-        <div class="first_circle4" style="
-        animation-delay: .2s;
-        "></div>
     </div>
     <div class="first_circle4">
-        <div class="first_circle1" style="
-        animation-delay: .2s;
-        "></div>
     </div>
 
-    <div class="first_Box"></div>
+    <div class="first_Box">
+    </div>
+
+    <div class="secend_box1">
+    </div>
+    <div class="secend_box2">
+    </div>
+    <div class="secend_box3">
+    </div>
+    <div class="secend_box4">
+    </div>
 </div>
 
 <!--
-<div class="move">
-    <div class="wave70"></div>
-    <div class="wave40"></div>
-    <div class="wave50"></div>    
-    <div class="wave30"></div>
-    <div class="wave70"></div>
-    <div class="wave60"></div>
-    <div class="wave30"></div>    
-    <div class="wave40"></div>    
-</div>
+
+    <div class="first_Box">
+        <div class="move">
+            <div class="wave70"></div>
+            <div class="wave40"></div>
+            <div class="wave50"></div>    
+            <div class="wave30"></div>
+            <div class="wave70"></div>
+            <div class="wave60"></div>
+            <div class="wave30"></div>    
+            <div class="wave40"></div>    
+        </div>
+    </div>
 -->
