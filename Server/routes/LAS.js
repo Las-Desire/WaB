@@ -26,6 +26,7 @@ var send_html = (res, path)=>{
 
 router.get('/6644', (req, res) => {
     send_html(res,"./HTML/Main.html");
+    
 });
 
 module.exports = router;   
