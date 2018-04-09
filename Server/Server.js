@@ -1,29 +1,18 @@
+
+var Server_Start_Message=["Las a.k.a Desire","Server Start"];
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var fs = require("fs");
 
-var LAS = require('./routes/LAS');
-
-var Server_Start_Message=["Las a.k.a Desire","Server Start"];
-
-var send_html = (res, path)=>{
-    fs.readFile(path,  function(err, data) {
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.end(data);
-    });
-};
-
-
-io.sockets.on('connection', function (socket) {
-    console.log('ll');
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/main.html');
 });
 
-app.get('/las',(res,req)=>{
-    console.log('las');
-    send_html(req,"./HTML/Main.html");
+var i=0;
+io.on('connection', function (socket) {
+    console.log(i);
+});
+http.listen(3001, function () {
+    console.log('listening on *:3000');
 });
 
-http.listen(3000, function () {
-    Server_Start_Message.forEach(x=>console.log(x));
-});
