@@ -11,6 +11,8 @@ app.get('/', function (req, res) {
 var i=0;
 io.on('connection', function (socket) {
     console.log(i);
+    i=i+1;
+    socket.emit('a',50);
 });
 http.listen(3001, function () {
     console.log('listening on *:3000');
