@@ -1,13 +1,12 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io();
-        
     socket.on('a', function(x) {
         console.log(x);
+        var v = document.getElementById("text");
+        v.innerText=x;
     });
-        
-
 </script>
-<h1>
-    qwe
-</h1>
+<div id="text">
+LAS
+</div>
