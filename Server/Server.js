@@ -8,12 +8,19 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/main.html');
 });
 
+
 var i=0;
 io.on('connection', function (socket) {
     console.log(i);
     i=i+1;
     socket.emit('a',i);
+    io.to(socket.id).emit('qw',2);
+
+    socket.on('qwe',data=>{
+        console.log('data   ');
+    });
 });
+
 
 http.listen(3001, function () {
     console.log('listening on *:3000');
