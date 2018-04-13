@@ -1,13 +1,16 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
-    var socket = io();
-        
-    socket.on('a', function(x) {
+    var socket = io();    
+    socket.on('message', function(x) {
         console.log(x);
+        var h1=document.getElementById('spray');
+        h1.innerText=x;
     });
-        
 
+    socket.on('connect',()=>{
+        var h1=document.getElementById('spray');
+        h1.innerText='Connect';
+    });
 </script>
-<h1>
-    qwe
+<h1 id="spray">
 </h1>

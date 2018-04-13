@@ -9,12 +9,22 @@ app.get('/', function (req, res) {
 });
 
 var i=0;
+var id1;
+var id2;
 io.on('connection', function (socket) {
     console.log(i);
-    i=i+1;
-    socket.emit('a',50);
+    io.to(socket.id).emit('connect');
+    i++;
+    if(i%2==0){
+        const delay = require('delay');
+        delay(2000)
+        .then(() => {
+        });
+        io.to(socket.id).emit('message','message');
+    }
 });
-http.listen(3001, function () {
+
+http.listen(3000, function () {
     console.log('listening on *:3000');
 });
 
