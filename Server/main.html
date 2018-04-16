@@ -11,6 +11,10 @@
         var h1=document.getElementById('spray');
         h1.innerText='Connect';
     });
+    socket.on('las',(x)=>{
+        var h1=document.getElementById('spray');
+        h1.innerText=x;
+    });
 </script>
 <h1 id="spray">
 </h1>

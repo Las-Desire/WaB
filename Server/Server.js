@@ -15,6 +15,8 @@ io.on('connection', function (socket) {
     console.log(i);
     io.to(socket.id).emit('connect');
     i++;
+    //룸에 들어감
+    socket.join('room');
     if(i%2==0){
         const delay = require('delay');
         delay(2000)
@@ -28,3 +30,14 @@ http.listen(3000, function () {
     console.log('listening on *:3000');
 });
 
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+rl.on('line', (input) => {
+    console.log(`Received: ${input}`);
+    //룸에 있는거에 전체 메세지 보내기
+    io.to('room').emit("las",input);
+});
