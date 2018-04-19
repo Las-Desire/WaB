@@ -27,24 +27,22 @@
         if (canvas.getContext) {
           var ctx = canvas.getContext("2d");
   
-          ctx.fillStyle = "rgb(200,0,0)";
-          ctx.fillRect (0, 0, 50, 50);
-          
+          ctx.fillStyle = "rgb(0,0,0)";
+          ctx.fillRect (0, 0, 566, 566);
           //X,Y,size(x,y)
-          ctx.fillStyle = "rgb(100,0,0)";
-          ctx.fillRect (50, 0, 50, 50);
           for (var index = 0; index < 28; index++) {
               for (var jndex = 0; jndex < 28; jndex++) {
-                ctx.fillStyle = "rgb("+"30,200,0)";
-                ctx.fillRect (index*20, jndex*30, 10, 10);
+                ctx.fillStyle = "rgb("+"1000,1000,300)";
+                ctx.fillRect (3+index*20, 3+jndex*20, 19, 19);
               }
           }
         }
       }
+      
     </script>
    </head>
    <body onload="draw();">
-     <canvas id="canvas" width="560" height="560"></canvas>
+     <canvas id="canvas" width="570" height="570"></canvas>
 
     <h1>
         <div id="text">
