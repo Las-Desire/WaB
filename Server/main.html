@@ -33,12 +33,18 @@
           //X,Y,size(x,y)
           ctx.fillStyle = "rgb(100,0,0)";
           ctx.fillRect (50, 0, 50, 50);
+          for (var index = 0; index < 28; index++) {
+              for (var jndex = 0; jndex < 28; jndex++) {
+                ctx.fillStyle = "rgb("+"30,200,0)";
+                ctx.fillRect (index*20, jndex*30, 10, 10);
+              }
+          }
         }
       }
     </script>
    </head>
    <body onload="draw();">
-     <canvas id="canvas" width="150" height="150"></canvas>
+     <canvas id="canvas" width="560" height="560"></canvas>
 
     <h1>
         <div id="text">
