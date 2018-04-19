@@ -1,25 +1,24 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io();
-    socket.on('a', function(x) {
+    socket.on('connection', function(x) {
         console.log(x);
 
         var v = document.getElementById("text");
         v.innerText=x;
     });
-    function click() {
-        socket.emit('qwe',123);
-    }
-    socket.on('qw', function(x) {
+    
+    socket.on('direct-message', function(x) {
         console.log(x);
-
         var v = document.getElementById("text");
         v.innerText=x;
+        if(x=="las"){
+            socket.emit("d","w");
+        }
     });
+
+
     </script>
-<div id="text">
-LAS
-</div>
 <head>
     <meta charset="utf-8"/>
     <script type="application/javascript">
@@ -30,14 +29,20 @@ LAS
   
           ctx.fillStyle = "rgb(200,0,0)";
           ctx.fillRect (0, 0, 50, 50);
-          ctx.fillStyle = "rgb(100,0,0)";
+          
           //X,Y,size(x,y)
+          ctx.fillStyle = "rgb(100,0,0)";
           ctx.fillRect (50, 0, 50, 50);
-  
         }
       }
     </script>
    </head>
    <body onload="draw();">
      <canvas id="canvas" width="150" height="150"></canvas>
+
+    <h1>
+        <div id="text">
+            LAS
+        </div>
+    </h1>
    </body>
