@@ -51,9 +51,7 @@
         is_click=ture;
     }
     function drag(e) {
-        if(is_click==ture){
-            socket.emit("d",e.clientX);
-        }
+        socket.emit("d",{X:e.clientX,Y:e.client});    
     }
     </script>
    </head>
