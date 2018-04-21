@@ -35,6 +35,7 @@
               for (var jndex = 0; jndex < 28; jndex++) {
                 ctx.fillStyle = "rgb("+"1000,1000,300)";
                 ctx.fillRect (3+index*20, 3+jndex*20, 19, 19);
+                
               }
           }
         }
@@ -48,13 +49,11 @@
     }
     function down(e) {
         //socket.emit("d",e.clientX);
-        is_click=ture;
     }
     function drag(e) {
-        if(is_click==ture){
             socket.emit("d",e.clientX);
-        }
     }
+    
     </script>
    </head>
    <body onload="draw();">
