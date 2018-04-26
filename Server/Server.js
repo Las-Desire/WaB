@@ -15,19 +15,18 @@ app.get('/', function (req, res) {
 
 
 var i=0;
+var id1;
+var id2;
 io.on('connection', function (socket) {
     console.log(i);
-    i=i+1;
-    socket.emit('connection',i);
-    socket.on('d',(x)=>{
-        console.log(x);
-    });
-});
-rl.on('line', (line) => {
-    io.emit('direct-message',line);
-});
+const readline = require('readline');
 
-http.listen(3000, function () {
-    console.log('listening on *:3000'); 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
-
+rl.on('line', (input) => {
+    console.log(`Received: ${input}`);
+    //룸에 있는거에 전체 메세지 보내기
+    io.to('room').emit("las",input);
+});
