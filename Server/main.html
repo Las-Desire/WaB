@@ -48,7 +48,10 @@
         is_click=false;
     }
     function down(e) {
-        //socket.emit("d",e.clientX);
+        socket.emit("d","마우스 클릭함.");
+    }
+    function up(e){
+        socket.emit("d","마우스 클릭 안함.");
     }
     function drag(e) {
             socket.emit("d",e.clientX);
@@ -58,7 +61,7 @@
    </head>
    <body onload="draw();">
      <canvas id="canvas" width="570" height="570" onmouseover="over(event)" 
-     onmousedown="down(event)" onmousemove="drag(event)"></canvas>
+     onmousedown="down(event)" onmousemove="drag(event)" onmouseup="up(event)"></canvas>
 
     <h1>
         <div id="text">
