@@ -3,6 +3,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
+
 var Server_Start_Message=["Las a.k.a Desire","Server Start"];
 var app = require('express')();
 var http = require('http').Server(app);
@@ -12,8 +13,8 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/main.html');
 });
 
-
 var i=0;
+
 io.on('connection', function (socket) {
     console.log(i);
     i=i+1;
