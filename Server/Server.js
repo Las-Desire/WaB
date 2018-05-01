@@ -1,3 +1,5 @@
+
+const util = require('util');
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
@@ -16,13 +18,16 @@ app.get('/', function (req, res) {
 var i=0;
 
 io.on('connection', function (socket) {
+    var is_click=false;
     console.log(i);
     i=i+1;
     socket.emit('connection',i);
     socket.on('d',(x)=>{
-        console.log(x);
+        if(util.isBoolean(x)){
+            is_click = x;
+        }
+        console.log(is_click,x);
     });
-    var canvus = Create2DArray(28,28);
      
 });
 rl.on('line', (line) => {
@@ -32,11 +37,3 @@ rl.on('line', (line) => {
 http.listen(3000, function () {
     console.log('listening on *:3000'); 
 });
-
-function Create2DArray(rows,columns) {
-    var x = new Array(rows);
-    for (var i = 0; i < rows; i++) {
-        x[i] = new Array(columns);
-    }
-    return x;
- }
