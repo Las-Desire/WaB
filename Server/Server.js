@@ -22,7 +22,6 @@ io.on('connection', function (socket) {
     socket.on('d',(x)=>{
         console.log(x);
     });
-    var canvus = Create2DArray(28,28);
      
 });
 rl.on('line', (line) => {
@@ -32,11 +31,3 @@ rl.on('line', (line) => {
 http.listen(3000, function () {
     console.log('listening on *:3000'); 
 });
-
-function Create2DArray(rows,columns) {
-    var x = new Array(rows);
-    for (var i = 0; i < rows; i++) {
-        x[i] = new Array(columns);
-    }
-    return x;
- }
