@@ -52,13 +52,14 @@
         is_click=false;
     }
     function down(e) {
-        socket.emit("d","마우스 클릭함.");
+        socket.emit("d",true);
     }
     function up(e){
-        socket.emit("d","마우스 클릭 안함.");
+        socket.emit("d",false);
     }
     function drag(e) {
-            socket.emit("d",e.clientX);
+            socket.emit("d",{X : e.clientX,
+                                Y : e.clientY});
     }
     
     </script>

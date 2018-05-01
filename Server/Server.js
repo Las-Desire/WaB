@@ -1,3 +1,5 @@
+
+const util = require('util');
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
@@ -16,11 +18,15 @@ app.get('/', function (req, res) {
 var i=0;
 
 io.on('connection', function (socket) {
+    var is_click=false;
     console.log(i);
     i=i+1;
     socket.emit('connection',i);
     socket.on('d',(x)=>{
-        console.log(x);
+        if(util.isBoolean(x)){
+            is_click = x;
+        }
+        console.log(is_click,x);
     });
      
 });
